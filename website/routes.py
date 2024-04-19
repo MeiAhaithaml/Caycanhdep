@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, flash, request, redirect, jsonify
+from flask import Blueprint, render_template, flash, request, redirect, jsonify,send_from_directory
 from intasend import APIService
 
 from .models import Product,Cart,db,Order
@@ -14,7 +14,20 @@ def home():
     return render_template('home.html',items=items,cart=Cart.query.filter_by(customer_link=current_user.id).all()
                            if current_user.is_authenticated else [])
 
-@routes.route('add-to-cart/<int:item_id>')
+@routes.route('/media/<path:filename>',methods=['GET','POST'])
+def get_image(filename):
+    return send_from_directory('../media', filename)
+
+@routes.route('/<int:item_id>',methods=['GET'])
+def product_detail(item_id):
+    product = Product.query.get(item_id)
+    return render_template('product_details.html', product=product)
+@routes.route('/products/<tag>',methods=['GET'])
+@login_required
+def products_by_tag(tag):
+    items = Product.query.filter_by(tag=tag).all()
+    return render_template('tag/tag.html', items=items)
+@routes.route('add-to-cart/<int:item_id>',methods=['GET','POST'])
 @login_required
 def add_to_cart(item_id):
     item_to_add = Product.query.get(item_id)
@@ -45,7 +58,7 @@ def add_to_cart(item_id):
 
     return redirect(request.referrer)
 
-@routes.route('/cart')
+@routes.route('/cart',methods=['GET','POST'])
 @login_required
 def show_cart():
     cart = Cart.query.filter_by(customer_link=current_user.id).all()
@@ -55,7 +68,7 @@ def show_cart():
 
     return render_template('cart.html', cart=cart, amount=amount, total=amount+200)
 
-@routes.route('/pluscart')
+@routes.route('/pluscart',methods=['GET','POST'])
 @login_required
 def plus_cart():
     if request.method == 'GET':
@@ -79,7 +92,7 @@ def plus_cart():
 
         return jsonify(data)
 
-@routes.route('/minuscart')
+@routes.route('/minuscart',methods=['GET','POST'])
 @login_required
 def minus_cart():
     if request.method == 'GET':
@@ -104,7 +117,7 @@ def minus_cart():
         return jsonify(data)
 
 
-@routes.route('removecart')
+@routes.route('removecart',methods=['GET','POST'])
 @login_required
 def remove_cart():
     if request.method == 'GET':
@@ -128,7 +141,7 @@ def remove_cart():
 
         return jsonify(data)
 
-@routes.route('/place-order')
+@routes.route('/place-order',methods=['GET','POST'])
 @login_required
 def place_order():
     customer_cart = Cart.query.filter_by(customer_link=current_user.id)
@@ -173,7 +186,7 @@ def place_order():
         flash('Your cart is Empty')
         return redirect('/')
 
-@routes.route('/orders')
+@routes.route('/orders',methods=['GET','POST'])
 @login_required
 def order():
     orders = Order.query.filter_by(customer_link=current_user.id).all()

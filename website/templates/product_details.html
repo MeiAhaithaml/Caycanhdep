@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Product Details {% endblock %}
+
+
+{% block body %}
+
+<div>
+    <h2>{{ product.product_name }}</h2>
+    <p>Price: {{ product.current_price }} VND</p>
+    <p>In Stock: {{ product.in_stock }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Tag: {{ product.tag }}</p>
+    <div class="col-sm-3 text-center align-self-center">
+        <img src="{{product.product_picture }}" alt="" class="img-fluid img-thumbnail shadow-sm" height="150px"
+             width="150px">
+    </div>
+
+</div>
+
+{% endblock %}

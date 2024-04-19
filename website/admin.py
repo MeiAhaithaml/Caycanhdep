@@ -23,6 +23,9 @@ def add_shop_items():
             current_price = form.current_price.data
             previous_price = form.previous_price.data
             in_stock = form.in_stock.data
+            description = form.description.data
+            tag =form.tag.data
+            in_stock = form.in_stock.data
             flash_sale = form.flash_sale.data
 
             file = form.product_picture.data
@@ -37,6 +40,8 @@ def add_shop_items():
             new_shop_item.current_price = current_price
             new_shop_item.previous_price = previous_price
             new_shop_item.in_stock = in_stock
+            new_shop_item.description = description
+            new_shop_item.tag = tag
             new_shop_item.flash_sale = flash_sale
 
             new_shop_item.product_picture = file_path
@@ -76,6 +81,8 @@ def update_item(item_id):
         form.previous_price.render_kw = {'placeholder': item_to_update.previous_price}
         form.current_price.render_kw = {'placeholder': item_to_update.current_price}
         form.in_stock.render_kw = {'placeholder': item_to_update.in_stock}
+        form.description.render_kw = {'placeholder': item_to_update.description}
+        form.tag.render_kw = {'placeholder': item_to_update.tag}
         form.flash_sale.render_kw = {'placeholder': item_to_update.flash_sale}
 
         if form.validate_on_submit():
@@ -83,6 +90,8 @@ def update_item(item_id):
             current_price = form.current_price.data
             previous_price = form.previous_price.data
             in_stock = form.in_stock.data
+            description = form.description.data
+            tag = form.tag.data
             flash_sale = form.flash_sale.data
 
             file = form.product_picture.data
@@ -97,6 +106,8 @@ def update_item(item_id):
                                                                 current_price=current_price,
                                                                 previous_price=previous_price,
                                                                 in_stock=in_stock,
+                                                                description=description,
+                                                                tag=tag,
                                                                 flash_sale=flash_sale,
                                                                 product_picture=file_path))
 

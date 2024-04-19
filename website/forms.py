@@ -29,6 +29,8 @@ class ShopItemsForm(FlaskForm):
     current_price = FloatField('Current Price', validators=[DataRequired()])
     previous_price = FloatField('Previous Price', validators=[DataRequired()])
     in_stock = IntegerField('In Stock', validators=[DataRequired(), NumberRange(min=0)])
+    description =StringField('Description', validators=[DataRequired()])
+    tag =StringField('Tag', validators=[DataRequired()])
     product_picture = FileField('Product Picture', validators=[DataRequired()])
     flash_sale = BooleanField('Flash Sale')
 
