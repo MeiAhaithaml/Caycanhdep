@@ -1,0 +1,65 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    padding-bottom: 400px;
+}
+footer{
+    background: #D9D9D9;
+    color: #000000;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    height: 205px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+footer h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 650;
+    font-size: 30px;
+    color: #29531B;
+    bottom: 0;
+}
+
+footer .wrapper{
+    margin-right: 30px;
+    width: 40%;
+    bottom: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: #155F1C;
+    bottom: 0;
+}
+
+footer .links2{
+    position: absolute;
+    left: 40%;
+    top:5px;
+}
+
+footer .links3{
+    position: absolute;
+    left: 70%;
+     top:5px;
+}
+
+footer .social{
+    position: absolute;
+    right: 5%;
+     top:5px;
+}
+
+nav.mobile{
+    display: none;
+}
+
+.mobile-container{
+    display: none;
+}

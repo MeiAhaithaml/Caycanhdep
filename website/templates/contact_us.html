@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact Us {% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        height:1000px;
+        background-color: #f3f3f3;
+    }
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        height: 500px;
+    }
+    .info {
+        flex: 1;
+        padding-right: 20px;
+    }
+    .info p {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    #map {
+        flex: 1;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="container">
+    <div class="info">
+        <h3>Contact Us</h3>
+        <p><strong>Address:</strong> 123 Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội</p>
+        <p><strong>Phone:</strong> +123 456 789</p>
+        <p><strong>Email:</strong> 123@gmail.com</p>
+    </div>
+    <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.7598380520762!2d105.8423723747685!3d21.002261988689114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac76cb235479%3A0xb0900b589fc23e15!2zMTIzIFAuIFRy4bqnbiDEkOG6oWkgTmdoxKlhLCDEkOG7k25nIFTDom0sIEhhaSBCw6AgVHLGsG5nLCBIw6AgTuG7mWkgMTAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1713507561983!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+{% endblock %}

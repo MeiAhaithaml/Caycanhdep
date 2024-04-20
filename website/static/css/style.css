@@ -1,16 +1,16 @@
 .d-flex .btn{
-    background: orange;
-    border: 2px solid orange;
+    background: rgb(163, 212, 190);
+    border: 2px rgb(113, 171, 145);
     border-radius: 8px;
     color: #fff;
 }
 .d-flex .btn:hover{
-    background: rgb(228, 150, 7);
-    border: 2px solid rgb(228, 150, 7);
+    background: rgb(150, 168, 146);
+    border: 2px solid rgb(150, 168, 146);
 }
 
 #right1 :hover{
-    color: orange;
+    color: rgb(150, 168, 146);
     transition: 300ms;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .container .row .col .row .col a {
-    background-color: orange;
+    background-color: rgb(150, 168, 146);
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
@@ -31,15 +31,97 @@
 }
 
 .container .row .col .row .col a :hover {
-    background-color: rgb(201, 132, 5);
+    background-color: rgb(150, 168, 146);
 }
+
 #column :hover{
-    transform: scale(0.9);
+    transform: scale(0.95);
     transition: 450ms;
     border-radius: 10px;
 }
 
 #items :hover {
-    color: orange;
-    transition: 200ms;
+    color: rgb(134, 181, 148);
+    transition: 2ms;
 }
+/* Phan Product Details*/
+.img-container {
+    border: 10px solid #ddd;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    object-fit: cover; /* Đảm bảo rằng ảnh nằm hoàn toàn trong container */
+    width: 100%; /* Đảm bảo rằng ảnh đầy đủ chiều rộng của container */
+    height: 100%; /* Đảm bảo rằng ảnh đầy đủ chiều cao của container */
+}
+
+
+/* Định dạng container cho nội dung */
+.content-container {
+    padding: 100px;
+}
+
+/* Định dạng các phần tử thông tin sản phẩm */
+.product-name {
+ font-family: Arial Nova;
+    font-size: 50px;
+    line-height: 1.5;
+}
+
+.product-info {
+ font-family: Arial Nova;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.product.tag {
+    font-size: 24px; /* Kích thước font lớn hơn cho giá */
+    font-weight: bold; /* Trọng lượng font đậm hơn */
+    line-height: 1.6;
+}
+.product.button:hover {
+    background-color: #0056b3; /* Màu nền mới khi hover */
+    border-color: #0056b3; /* Màu viền mới khi hover */
+}
+/* Phần home danh mục sản phẩm*/
+.product-column {
+    margin-right: 20px; /* Điều chỉnh khoảng cách giữa các cột theo chiều ngang */
+}
+
+.btn-add {
+margin-right: 1px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn-fav {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+.row {
+    display: flex;
+    justify-content: space-between; /* Căn các cột vào hai đầu của hàng */
+}
+
+.col {
+    flex: 1;
+}
+
+
+/* css cho foooter */

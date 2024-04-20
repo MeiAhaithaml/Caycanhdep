@@ -1,0 +1,11 @@
+/* Đảm bảo các nút Add to Favorites và Add to Cart ở giữa trên cùng một hàng */
+.row .col .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Khoảng cách giữa hai nút */
+.row .col .row .col {
+    margin: 5px;
+}

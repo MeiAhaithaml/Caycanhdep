@@ -3,8 +3,20 @@
 {% block title %} Customers {% endblock %}
 
 {% block body %}
+<style>
+    .custom-table {
+    color: #000000;
+}
 
-<table class="table table-dark table-hover">
+.custom-table th, .custom-table td {
+    border: 1px solid #000000; /* Viền vuông và màu viền (màu xanh đậm) */
+}
+
+.custom-table {
+    background-color: #ffffff;
+}
+</style>
+<table class="table custom-table table-hover">
     <thead>
         <tr>
             <th scope="col">Customer ID</th>
@@ -17,12 +29,14 @@
     </thead>
     <tbody>
         {% for customer in customers %}
-        <tr>
-        <td>{{ customer.id }}</td>
-        <td>{{ customer.username }}</td>
-        <td>{{ customer.email }}</td>
-        <td>{{ customer.date_joined }}</td>
-        </tr>
+            {% if customer.id != 1 %}
+                <tr>
+                    <td>{{ customer.id }}</td>
+                    <td>{{ customer.username }}</td>
+                    <td>{{ customer.email }}</td>
+                    <td>{{ customer.date_joined }}</td>
+                </tr>
+            {% endif %}
         {% endfor %}
     </tbody>
 </table>

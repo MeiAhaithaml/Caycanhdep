@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block title %} About Us {% endblock %}
+
+{% block body %}
+<style>
+    body {
+         background-image: url('../static/images/au.png');
+         background-size: cover;
+         background-position: center;
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding-bottom: 100px;
+     }
+
+     .about-container {
+         max-width: 800px;
+         margin: 100px auto;
+         padding: 20px;
+     }
+
+     .outer-container {
+         border: 2px solid #ccc;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         border-radius: 10px;
+         padding: 20px;
+         background-color: white;
+     }
+
+     .about-container h1 {
+         font-family: 'Open Sans', sans-serif;
+         font-size: 30px;
+         color: black;
+         margin-bottom: 20px;
+     }
+
+     .about-container p {
+         font-size: 18px;
+         color: black;
+         line-height: 1.5;
+         margin-bottom: 10px;
+     }
+
+     .image-text-container {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         margin-bottom: 20px;
+         width: 100%;
+     }
+
+     .image-container {
+         width: 50%;
+     }
+
+     .image-container img {
+         width: 100%;
+         height: auto;
+     }
+
+     .text-container {
+         width: 200%;
+     }
+
+     .logo-container {
+         background-image: url('https://scontent.fhan5-11.fna.fbcdn.net/v/t1.15752-9/434866880_351817470682375_2023303080354011245_n.png?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGbBFL1K38IMQlg77gI14Lm8DE978k-Hu3wMT3vyT4e7eY1_sI6IHNqrvUsva39FK0CugyiQwHlBaTyH-4nbMl5&_nc_ohc=DYzhGWySJF8Ab7JCqNn&_nc_ht=scontent.fhan5-11.fna&oh=03_Q7cD1QERkX691G-k9ZTzutaxYz8OH--pitDCgL9ZsXb6ZpLw1Q&oe=6649B5EB');
+         background-size: contain;
+         background-repeat: no-repeat;
+         width: 200px;
+         height: 100px;
+         text-indent: -9999px;
+     }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+
+<body>
+
+<div class="about-container">
+    <div class="logo-container"></div>
+    <div class="outer-container">
+        <div class="image-text-container">
+            <div class="text-container">
+                <h1>LunaLove</h1>
+                <p>Chào mừng bạn đến với LunaLove!</p>
+                <p>Nơi đam mê hòa quyện cùng sắc xanh thiên nhiên!</p>
+
+                <p>Chúng tôi là một tập thể những người yêu cây cảnh, mong muốn mang đến cho quý khách hàng những sản
+                    phẩm chất lượng cao và dịch vụ hoàn hảo nhất. Với niềm đam mê cháy bỏng và tâm huyết dồi dào,
+                    LunaLove luôn nỗ lực không ngừng để đáp ứng mọi nhu cầu của bạn.</p>
+
+                <p>Tại sao bạn nên chọn LunaLove</p>
+
+                <ul>
+                    <li>Thiên đường cây cảnh: Khám phá hơn LunaLove loại cây cảnh độc đáo và đa dạng, từ những loại cây
+                        phổ biến tạo điểm nhấn cho ngôi nhà đến những loại cây quý hiếm mang ý nghĩa phong thủy sâu sắc.
+                    </li>
+                    <li>Chất lượng đỉnh cao: Chúng tôi luôn đặt tiêu chí chất lượng lên hàng đầu. Tất cả các cây cảnh
+                        tại LunaLove đều được tuyển chọn kỹ lưỡng từ những nguồn uy tín, đảm bảo khỏe mạnh, phát triển
+                        tốt và đáp ứng mọi yêu cầu khắt khe nhất của khách hàng.
+                    </li>
+                    <li>Giá cả hợp lý: Chúng tôi luôn cân nhắc để đưa ra mức giá hợp lý nhất cho từng sản phẩm, phù hợp
+                        với túi tiền của mọi khách hàng.
+                    </li>
+                    <li>Dịch vụ chuyên nghiệp: Đội ngũ nhân viên trẻ trung, năng động và am hiểu về cây cảnh luôn sẵn
+                        sàng tư vấn nhiệt tình, giải đáp mọi thắc mắc và giúp bạn lựa chọn được những loại cây phù hợp
+                        nhất với nhu cầu và sở thích của mình.
+                    </li>
+                    <li>Giao hàng nhanh chóng: Chúng tôi giao hàng miễn phí tận nơi cho khách hàng trong khu vực. Đảm
+                        bảo sản phẩm đến tay khách hàng một cách nhanh chóng và nguyên vẹn nhất.
+                    </li>
+                </ul>
+
+                <p>LunaLove – Nâng tầm không gian sống của bạn!</p>
+
+                <p>Trang web của chúng tôi là một nơi để bạn khám phá và mua sắm các loại cây đa dạng, từ cây cảnh nội
+                    thất cho căn hộ đến cây cảnh ngoại thất cho khu vườn của bạn. Chúng tôi tập trung vào việc cung cấp
+                    các sản phẩm chất lượng và mang lại trải nghiệm mua sắm dễ dàng và thoải mái cho khách hàng.</p>
+
+                <p>Ở trang web của chúng tôi, bạn sẽ tìm thấy một bộ sưu tập đa dạng các loại cây, từ những loài cây phổ
+                    biến cho đến những loài cây hiếm có. Chúng tôi cam kết cung cấp thông tin chi tiết về mỗi loại cây,
+                    giúp bạn chọn lựa được cây phù hợp với không gian và yêu cầu của bạn.</p>
+
+                <p>. Chúng tôi mong muốn mang lại cho bạn trải nghiệm mua sắm dễ dàng, thú vị và đáng nhớ trên trang web
+                    của chúng tôi.</p>
+
+                <p>Cảm ơn bạn đã lựa chọn chúng tôi. Chúng tôi mong được phục vụ bạn!</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

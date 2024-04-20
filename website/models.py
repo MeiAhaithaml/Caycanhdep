@@ -70,3 +70,11 @@ class Order(db.Model):
 
     def __str__(self):
         return '<Order %r>' % self.id
+
+
+class Favorite(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    customer_link = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable=False)
+    product_link = db.Column(db.Integer, db.ForeignKey('product.id'), nullable=False)
+    def __str__(self):
+        return '<Favorite %r>' % self.id

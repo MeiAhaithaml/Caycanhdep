@@ -22,7 +22,6 @@ def add_shop_items():
             product_name = form.product_name.data
             current_price = form.current_price.data
             previous_price = form.previous_price.data
-            in_stock = form.in_stock.data
             description = form.description.data
             tag =form.tag.data
             in_stock = form.in_stock.data

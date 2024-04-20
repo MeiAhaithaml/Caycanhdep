@@ -3,8 +3,20 @@
 {% block title %} Admin Page {% endblock %}
 
 {% block body %}
+<style>
+    .shop-table {
+    color: #000000;
+}
 
-<table class="table table-dark table-hover">
+.shop-table th, .shop-table td {
+    border: 1px solid #000000;
+}
+
+.shop-table {
+    background-color: #ffffff;
+}
+</style>
+<table class="table shop-table table-hover">
     <thead>
         <tr>
             <th scope="col">Customers</th>

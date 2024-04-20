@@ -2,36 +2,40 @@
 
 {% block title %} Home {% endblock %}
 
-
 {% block body %}
 
 <div class="container my-5">
-    <div class="row">
-        <h3 style="color: white;">Welcome <span class="text-capitalize">{{ customer.username }}</span></h3>
-
-        <div class="col-sm-2 border-end" style="margin-top: 20px;">
-        
-            <ul class="list-unstyled">
-                <li class="d-grid"><a href="#" class="btn btn-primary">Profile</a></li>
-                <li class="d-grid"><a href="/change-password/{{ customer.id }}" class="btn btn-primary" style="margin-top: 5px;">Change Password</a></li>
-
-            </ul>
-        
-        </div>
-
-        <div class="col-sm-5 offset-sm-1" style="background-color: white; border-radius: 18px; margin-top: 20px;">
-            <div class="row">
-
-                <div class="col-sm-8">
-                    <div class="card m-2">
-
-                        <h3>{{ customer.username }}</h3>
-                        <p>Email: {{ customer.email }}</p>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            {% if customer %}
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">Welcome <span class="text-capitalize">{{ customer.username }}</span></h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><a href="#" class="btn btn-primary btn-block">Profile</a></li>
+                                <li><a href="/change-password/{{ customer.id }}" class="btn btn-primary btn-block">Change Password</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>{{ customer.username }}</h4>
+                                    <p>Email: {{ customer.email }}</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
-        
+            {% else %}
+            <div class="alert alert-warning" role="alert">
+                Please log in to view this page.
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>

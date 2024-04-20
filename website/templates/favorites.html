@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %} Favorites {% endblock %}
+
+{% block body %}
+
+<style>
+    .favorites-container {
+        text-align: center; /* Căn giữa các sản phẩm */
+    }
+
+    .product-item {
+        border: 10px solid #ccc; /* Tạo viền xung quanh sản phẩm */
+        border-radius: 15px; /* Làm tròn góc của viền */
+        padding: 20px; /* Tạo khoảng cách giữa nội dung và viền */
+        margin-bottom: 20px; /* Tạo khoảng cách giữa các sản phẩm */
+    }
+    .remove-button {
+        background-color: #ff5733;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px; /* Tạo khoảng cách với nút kế bên */
+    }
+
+    .add-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container favorites-container">
+    {% if favorites %}
+        {% for favorite in favorites %}
+            <div class="product-item">
+                <h2>{{ favorite.product_name }}</h2>
+                <img src="{{ favorite.product_picture }}" alt="{{ favorite.product_name }}">
+                <h5>Price: {{ favorite.current_price }} VNĐ</h5>
+                <h5>Mô tả:</h5><p> {{ favorite.description }}</p>
+                <form action="/remove-from-favorite/{{ favorite.id }}" method="POST">
+                    <button type="submit" class="remove-button">Xóa khỏi yêu thích</button>
+                </form>
+                <form action="/add-to-cart/{{ favorite.id }}" method="POST">
+                    <button type="submit" class="add-button">Thêm vào giỏ hàng</button>
+                </form>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h2>Chưa có sản phẩm nào yêu thích.</h2>
+    {% endif %}
+</div>
+
+
+{% endblock %}

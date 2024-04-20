@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -10,36 +9,41 @@
             integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
             crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e24507d923.js" crossorigin="anonymous"></script>
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/all.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="icon" href="../static/images/logo 1.png">
     <title>LunaLove | {% block title %} {% endblock %}</title>
 </head>
-<body style="background-color: rgb(124,14,151);">
+
+<body style="background-color: rgb(237,247,235);">
     <nav class="navbar navbar-expand-lg" style="background-color: white;">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#" style="color: orange; font-size: 30px; margin-right: -2px;">
-          <i class="fa-brands fa-amazon"></i>
+        <a class="navbar-brand" href="#" style="color: rgb(150,168,146); font-size: 30px; margin-right: -2px;">
+         <img src="../static/images/logo 1.png" alt="Luna Logo" width="80" height="50">
+
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/" style="font-family: cursive; font-size: 19px;">LunaLove</a>
+       <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="/" style="font-family: cursive; font-size: 19px; color: rgb(54, 128, 87);">LunaLove</a>
+</li>
+
+
+              <li class="nav-item">
+              <a class="nav-link text-grey" href="about_us" style="font-size: 17px;">About Us</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link text-grey" href="#" style="font-size: 17px;">About Us</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-grey" href="#" style="font-size: 17px;">Contact us</a>
+              <a class="nav-link text-grey" href="contact_us" style="font-size: 17px;">Contact us</a>
             </li>
           </ul>
 
-          <form class="d-flex" role="search" action="/search" style="margin-right: 170px;" method="POST">
+          <form class="d-flex" role="search" action="/search" style="margin-right: 200px;" method="POST">
             <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
             <button class="btn" type="submit">Search</button>
           </form>
@@ -64,11 +68,11 @@
 
           </li>
 
-          <li class="nav-item mx-2" id="item">
-            <a class="nav-link text-grey" href="#"><span class="badge bg-success"></span> WishList
-              <i class="fa-solid fa-heart"></i>
-            </a>
-          </li>
+            <li class="nav-item mx-2" id="item">
+                <a class="nav-link text-grey" href="/favorites"><span class="badge bg-success"></span> WishList
+                    <i class="fa-solid fa-heart"></i>
+                </a>
+            </li>
 
 
           <li class="nav-item dropdown mx-2">
@@ -114,11 +118,70 @@
     {% endblock %}
 
 
-    <footer class="container-fluid  text-center p-2 mt-5" style="background-color: orange; color: white;">
-      <a href="https://github.com/Frost-Codes" style="color: white;">LunaLove</a> | <span>
-        <i class="fa-sharp fa-regular fa-copyright"></i></span> 2023 All rights reserved
+<footer>
+    <div class="warpper">
+        <div class="link-container">
+            <h2>LunaLove</h2>
+            <div class="links1">
+                <h3> CÔNG TY TNHH BÁN CÂY CẢNH ĐẸP </h3>
+                <div class="vector2">
+                    <img src="images/material-symbols_location-on-outline-sharp.svg" alt="">
+                    <span>Địa chỉ: 123 Trần Đại Nghĩa, Hai Bà Trưng, Hà Nội</span>
+                </div>
+                <div class="vector2">
+                    <img src="images/Vector.svg" alt="" width="12px" height="12px">
+                    <span>Điện thoại: +84-0123456789</span>
 
-    </footer>
+                    <div class="vector2">
+                        <img src="images/material-symbols_mark-email-read-outline-rounded.svg" alt="">
+                        <span>Email: 123@gmail.com</span></div>
+                </div>
+
+            </div>
+            <div class="links2">
+
+                <ul>
+                    <h3> Menu</h3>
+                    <li>
+                        <a href="admin-page">Admin</a>
+                    </li>
+                    <li>
+                        <a href="about_us" style="font-size: 17px;">About Us</a>
+                    </li>
+                    <li>
+                        <a href="contact_us" style="font-size: 17px;">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="https://bancaydep.com/" target="_blank"> Cửa hàng cây cảnh </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="links3">
+
+                <ul>
+                    <h3> Danh mục </h3>
+                    <li>
+                        <a href="{{ url_for('routes.products_by_tag', tag='Cây phong thủy') }}"> Cây phong thủy </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('routes.products_by_tag', tag='Cây xương rồng') }}"> Cây xương rồng</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('routes.products_by_tag', tag='Cây sen đá') }}"> Cây sen đá </a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('routes.products_by_tag', tag='Cây cảnh trong nhà') }}"> Cây cảnh trong
+                            nhà </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 
     <script src="{{ url_for( 'static', filename='js/owl.carousel.min.js') }}"></script>
     <script src="{{ url_for( 'static', filename='js/all.min.js') }}"></script>

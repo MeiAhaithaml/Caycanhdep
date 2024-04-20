@@ -3,24 +3,23 @@
     box-sizing: border-box;
 }
 body{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+     background-color: rgb(233, 247, 237); /* Màu xanh pastel nhạt */
     height: 100vh;
+}
 }
 .base .base-content{
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50% ,-50%);
     color:#fff;
 }
-
+/* nền của form đăng nhập */
 .base .base-content .form{
     height: 500px;
-    width: 300px;
-    background: rgba(0, 0, 0, 0.521);
-    border: 1px solid #FF723A;
+    width: 400px;
+    background: rgba(188, 212, 195, 0.521);
+    border: 1px solid rgb(21, 171, 91);
     border-radius: 10px;
     text-align: center;
     position: absolute;
@@ -29,16 +28,17 @@ body{
     transform: translate(-50%, -50%);
 
 }
+/* Màu chữ của login */
 .base .base-content .form h3{
-    color: #20D489;
-    font-family: cursive;
+    color: rgb(12, 69, 29);
+    font-family: Arial Black;
     font-size: 30px;
 }
 .base .base-content .form hr{
     width: 88%;
     margin-top: 30px;
     margin-left: 20px;
-    background-color: #FF723A;
+    background-color: black;
 }
 #base-signup .base-content .form hr{
     margin-top: 2px;
@@ -68,13 +68,12 @@ body{
     padding: 5 20px;
     text-decoration: none;
     color: #fff;
-    background:#20D489;
-    border: 2px solid #20D489;
+    background: rgb(109, 143, 129);
+    border: 10px solid rgb(109, 143, 129);
     border-radius: 25px;
     transition: all 0.3s ease;
 }
 .base .base-content .form .buttons input:hover, .base .base-content .form .buttons a:hover{
-    background: transparent;
-    border: 1px solid #fff;
+    background: rgb(141, 186, 156);
+    border: 7px solid rgb(141, 186, 156);
 }
-
